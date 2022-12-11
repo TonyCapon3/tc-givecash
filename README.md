@@ -10,8 +10,8 @@ Giving Cash In QBCore Thru [qb-target](https://github.com/qbcore-framework/qb-ta
 
 
 # Installation
-Drag and Drop
+Drag and Drop, Start Resource
 
-# Preview
+
 
 

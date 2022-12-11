@@ -1,2 +1,2 @@
 # tc-givecash
-Giving Cash In qbcore thru qb-target &amp; qb-input.
+Giving Cash In QBCore Thru [qb-target](https://github.com/qbcore-framework/qb-target) & [qb-input](https://github.com/qbcore-framework/qb-input).

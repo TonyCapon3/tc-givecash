@@ -9,6 +9,3 @@ server_scripts {
     'server/sv_main.lua'
 }
 
-shared_scripts {
-    'config.lua'
-}

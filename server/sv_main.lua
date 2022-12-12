@@ -7,6 +7,7 @@ RegisterNetEvent('tc-giveCash:server:charge', function(id, amount)
     local given = QBCore.Functions.GetPlayer(tonumber(id))
     local givenPed = GetPlayerPed(tonumber(id))
     local giverPed = GetPlayerPed(src)
+    if not giver or not given then return end
     if not giver.PlayerData.metadata["isdead"] then
         local check = #(GetEntityCoords(givenPed) - GetEntityCoords(giverPed))
 

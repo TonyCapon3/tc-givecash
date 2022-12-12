@@ -13,9 +13,10 @@ RegisterNetEvent('tc-giveCash:server:charge', function(id, amount)
 
         if check < 10.0 then
             if tonumber(amount) > 0 then
-                giver.Functions.RemoveMoney('cash', tonumber(amount))
-                given.Functions.AddMoney('cash', tonumber(amount))
-                TriggerClientEvent('QBCore:Notify', src, 'Sent $'..tonumber(amount).." to"..id, 'success')
+                if giver.Functions.RemoveMoney('cash', tonumber(amount)) then
+                    given.Functions.AddMoney('cash', tonumber(amount))
+                    TriggerClientEvent('QBCore:Notify', src, 'Sent $'..tonumber(amount).." to"..id, 'success')
+                end
             else
                 TriggerClientEvent('QBCore:Notify', src, 'Can\'t Send $0', 'error')
             end

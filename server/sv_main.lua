@@ -16,6 +16,7 @@ RegisterNetEvent('tc-giveCash:server:charge', function(id, amount)
                 if giver.Functions.RemoveMoney('cash', tonumber(amount)) then
                     given.Functions.AddMoney('cash', tonumber(amount))
                     TriggerClientEvent('QBCore:Notify', src, 'Sent $'..tonumber(amount).." to"..id, 'success')
+                        TriggerClientEvent('QBCore:Notify', id, 'you received $'..tonumber(amount).." in cash from ID: #"..src, 'success')
                 end
             else
                 TriggerClientEvent('QBCore:Notify', src, 'Can\'t Send $0', 'error')
